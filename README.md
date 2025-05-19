@@ -30,27 +30,27 @@
 
 ## 📦 Getting Started (Development)
 
-# 1. Clone the repository
+### 1. Clone the repository
 ```bash
 git clone https://github.com/your-username/have-a-chai.git
 ```
-# 2. Change directory
+### 2. Change directory
 ```bash
 cd have-a-chai
 ```
 
-# 3. Install dependencies
+### 3. Install dependencies
 ```bash
 npm install
 ```
 
-# 4. Set up environment variables
+### 4. Set up environment variables
 ```bash
 cp .env.local
 # Fill in required env vars (MongoDB URI, NextAuth, Razorpay, etc.)
 ```
 
-# 5. Run the development server
+### 5. Run the development server
 ```bash
 npm run dev
 # Visit http://localhost:3000
