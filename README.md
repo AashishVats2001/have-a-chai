@@ -28,22 +28,6 @@
 
 ---
 
-## 📁 Project Structure
-
-.
-├── app/ # Pages & routing (Next.js App Router)
-├── components/ # Reusable UI components
-├── actions/ # Server actions
-├── lib/ # Utilities and DB logic
-├── public/ # Static files
-├── .env.local # Environment variables (not committed)
-├── tailwind.config.mjs # TailwindCSS config
-├── next.config.mjs # Next.js config
-├── package.json
-└── ...
-
----
-
 ## 📦 Getting Started (Development)
 
 ```bash
@@ -62,6 +46,7 @@ cp .env.local
 npm run dev
 
 # Visit http://localhost:3000
+```
 
 ---
 
