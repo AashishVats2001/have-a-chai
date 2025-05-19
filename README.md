@@ -30,21 +30,29 @@
 
 ## 📦 Getting Started (Development)
 
-```bash
 # 1. Clone the repository
+```bash
 git clone https://github.com/your-username/have-a-chai.git
+```
+# 2. Change directory
+```bash
 cd have-a-chai
+```
 
-# 2. Install dependencies
+# 3. Install dependencies
+```bash
 npm install
+```
 
-# 3. Set up environment variables
+# 4. Set up environment variables
+```bash
 cp .env.local
 # Fill in required env vars (MongoDB URI, NextAuth, Razorpay, etc.)
+```
 
-# 4. Run the development server
+# 5. Run the development server
+```bash
 npm run dev
-
 # Visit http://localhost:3000
 ```
 
@@ -72,5 +80,4 @@ This project is licensed under the **MIT License** — you are free to use, modi
 
 > Note: *Have A Chai* is a personal showcase project built for educational and portfolio purposes. It is **not intended for commercial use** or deployment as a real payment platform.
 
-See the [LICENSE](./LICENSE) file for full details.
-```
+
