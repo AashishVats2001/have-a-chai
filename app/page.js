@@ -181,13 +181,13 @@ export default function Home() {
 
                 <div className="flex flex-col h-full gap-4 leading-6 md:leading-7 text-center md:text-start">
                   <p className="text-[#cf8c51] ">
-                    <span className="bg-[#ff914d] text-[#f2f5fe] px-1 rounded">Share your passion</span> and let your supporters fuel your journey. Whether you&apos;re a <span className="bg-[#ff914d] text-[#f2f5fe] px-1 rounded">Writer, Musician, Developer, or Artist,</span> HaveAChai is here to help you turn appreciation into something tangible.
+                    <span className="font-semibold text-[#99ab61]">Share your passion</span> and let your supporters fuel your journey. Whether you&apos;re a <span className="font-semibold text-[#99ab61]">Writer, Musician, Developer, or Artist,</span> HaveAChai is here to help you turn appreciation into something tangible.
                   </p>
                   <p className="text-[#cf8c51]">
-                    <span className="bg-[#ff914d] text-[#f2f5fe] px-1 rounded">Create</span> your profile, <span className="bg-[#ff914d] text-[#f2f5fe] px-1 rounded">Set</span> your goals, and <span className="bg-[#ff914d] text-[#f2f5fe] px-1 rounded">Receive</span> chai contributions from your audience.
+                    <span className="font-semibold text-[#99ab61]">Create</span> your profile, <span className="font-semibold text-[#99ab61]">Set</span> your goals, and <span className="font-semibold text-[#99ab61]">Receive</span> chai contributions from your audience.
                   </p>
                   <p className="text-[#cf8c51]">
-                    It will take minutes to setup your profile and create an interface between <span className="bg-[#ff914d] text-[#f2f5fe] px-1 rounded">You and your audience.</span>
+                    It will take minutes to setup your profile and create an interface between <span className="font-semibold text-[#99ab61]">You and your audience.</span>
                   </p>
                 </div>
 
@@ -255,9 +255,9 @@ export default function Home() {
 
                 <div className="flex flex-col gap-4 leading-6 md:leading-7 text-center md:text-start">
                   <p className="font-semibold">A Chai is more than just a drink:</p>
-                  <p>It&apos;s a small token of appreciation, a way to say <span className="bg-[#f96d8d] text-[#f2f5fe] px-1 rounded">Thank You</span> to the creators who bring value to your life — through their art, code, music, writing, or humor.</p>
-                  <p>By offering a chai, you’re helping them stay <span className="bg-[#f96d8d] text-[#f2f5fe] px-1 rounded">motivated,</span> keep <span className="bg-[#f96d8d] text-[#f2f5fe] px-1 rounded">creating</span> and <span className="bg-[#f96d8d] text-[#f2f5fe] px-1 rounded">chase their dreams</span> with more freedom and less worry.</p>
-                  <p><span className="bg-[#f96d8d] text-[#f2f5fe] px-1 rounded">Show your support</span> — whether it&apos;s a one-time gesture or a recurring chai — and be a part of their creative journey.</p>
+                  <p>It&apos;s a small token of appreciation, a way to say <span className="font-semibold text-[#f96d8d]">Thank You</span> to the creators who bring value to your life — through their art, code, music, writing, or humor.</p>
+                  <p>By offering a chai, you’re helping them stay <span className="font-semibold text-[#f96d8d]">motivated,</span> keep <span className="font-semibold text-[#f96d8d]">creating</span> and <span className="font-semibold text-[#f96d8d]">chase their dreams</span> with more freedom and less worry.</p>
+                  <p><span className="font-semibold text-[#f96d8d]">Show your support</span> — whether it&apos;s a one-time gesture or a recurring chai — and be a part of their creative journey.</p>
                   <p className="">Because even the smallest contribution can make a big difference in the life of a passionate creator.</p>
                 </div>
 
