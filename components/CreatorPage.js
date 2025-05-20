@@ -20,7 +20,7 @@ const CreatorPage = ({ username }) => {
     const searchParams = useSearchParams()
     const router = useRouter()
 
-    const totalDonated = payments.reduce((sum, p) => sum + p.amount, 0) / 100;
+    const totalDonated = payments.reduce((sum, p) => sum + p.amount, 0) / 10000;
 
     useEffect(() => {
         getData()
@@ -212,7 +212,7 @@ const CreatorPage = ({ username }) => {
                         {/* Cover and Profile Image */}
                         <div className='flex justify-center w-full mt-16  h-[25vw] max-h-[50vh] relative shadow-xl'>
                             <CldImage
-                                className='object-cover w-full h-full max-h-[50vh]'
+                                className='object-cover w-full h-full min-h-32 max-h-[50vh]'
                                 src={getCloudinaryImage(currentUser.coverpic, 'https://res.cloudinary.com/dnhnp8gtw/image/upload/v1745137118/y15bomxh1b07wiwsukka.jpg')} placeholder='blur' blurDataURL='https://res.cloudinary.com/dnhnp8gtw/image/upload/v1745137118/y15bomxh1b07wiwsukka.jpg'
                                 width={1000}
                                 height={500}
@@ -248,8 +248,7 @@ const CreatorPage = ({ username }) => {
 
                                 {payments.length > 0 && (
                                     <p className='text-slate-500 text-xs sm:text-sm md:text-base lg:text-lg'>
-                                        {payments.length} Supporter{payments.length > 1 ? 's' : ''} | ₹
-                                        {totalDonated.toLocaleString('en-IN')} Donated
+                                        {payments.length} Supporter{payments.length > 1 ? 's' : ''} | {totalDonated.toLocaleString('en-IN')} Chai Cups Donated
                                     </p>
                                 )}
                             </div>
