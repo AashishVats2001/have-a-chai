@@ -48,13 +48,13 @@ const AboutClient = () => {
                     <div className={`flex flex-col gap-6 px-6 md:px-14 py-10 ${openSans.className}`}>
                         <h2 className="text-3xl md:text-5xl font-bold">Hi!</h2>
                         <p>
-                            I&apos;m <span className="font-medium">Aashish Vats,</span> a front-end developer specializing in <span className="font-medium">React.js.</span> With a strong foundation in web development, I have built several projects that emphasize user-friendly design, efficiency, and interactivity.
+                            I&apos;m <span className="text-base md:text-lg font-semibold text-[#462716]">Aashish Vats,</span> a front-end developer specializing in <span className="font-semibold text-[#ffde59]">React.js.</span> With a strong foundation in web development, I have built several projects that emphasize user-friendly design, efficiency, and interactivity.
                         </p>
                         <p>
-                            My journey in web development has been a blend of <span className="font-semibold">creativity, code, and problem-solving.</span> With a background in Computer Applications, I&apos;ve built this platform to empower creators by simplifying how they receive support.
+                            My journey in web development has been a blend of <span className="font-semibold text-[#ffde59]">creativity, code, and problem-solving.</span> With a background in Computer Applications, I&apos;ve built this platform to empower creators by simplifying how they receive support.
                         </p>
                         <p>
-                            Welcome to <span className="font-semibold">HaveAChai,</span> a platform that I designed and developed to enable creators like you to connect with your audience in a more meaningful way. Whether you&apos;re an artist, developer, writer, or any creator, this platform allows your fans to support you with a simple and thoughtful gesture – <span className="font-semibold">a cup of chai.</span>
+                            Welcome to <span className="text-base md:text-lg font-semibold text-[#ffde59]">HaveAChai,</span> a platform that I designed and developed to enable creators like you to connect with your audience in a more meaningful way. Whether you&apos;re an artist, developer, writer, or any creator, this platform allows your fans to support you with a simple and thoughtful gesture – <span className="font-semibold text-[#ffde59]">a cup of chai.</span>
                         </p>
                         <p>
                             HaveAChai is inspired by the concept of community-driven platforms like <span className="p-1 bg-[#ffde59] text-[#282424] rounded-md underline underline-offset-2">
