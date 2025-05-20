@@ -3,14 +3,11 @@ import mongoose from "mongoose";
 const connectDB = async () => {
     try {
         const conn = await mongoose.connect(process.env.DB_URL, {
-            // useNewUrlParser: true,
-            // useUnifiedTopology: true,  
-            // Add this option for better connection handling
         });
         console.log(`MongoDB Connected: ${conn.connection.host}`);  // Correct string interpolation
     } catch (error) {
         console.error(`Error: ${error.message}`);
-        process.exit(1); 
+        process.exit(1);
     }
 }
 

@@ -958,7 +958,7 @@ const Profile = () => {
                             <button
                                 type='submit'
                                 disabled={isPaymentUnchanged() || isLoading || verificationStatus === 'invalid'}
-                                className={`rounded-full flex justify-center items-center text-[#eee2d8] bg-[#c9544f] py-2 my-4 font-medium hover:bg-[#b14a46] transition-all ${isPaymentUnchanged() && 'disabled'} disabled:bg-[#7e5958] disabled:cursor-not-allowed`}
+                                className={`rounded-full flex justify-center items-center text-[#eee2d8] text-base bg-[#c9544f] py-2 my-4 font-medium hover:bg-[#b14a46] transition-all ${isPaymentUnchanged() && 'disabled'} disabled:bg-[#7e5958] disabled:cursor-not-allowed`}
                             >
                                 {isPaymentSubmitting ? (
                                     <>

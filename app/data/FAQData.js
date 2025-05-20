@@ -1,13 +1,13 @@
 const FAQData = [
   {
     id: 1,
-    question: "What is HaveAChai.com?",
-    answer: "HaveAChai.com is a platform where creators can receive support from their audience in the form of a small, symbolic gesture – a cup of chai. It's an easy and friendly way for fans to say 'thank you' and support the work you do."
+    question: "What is HaveAChai?",
+    answer: "HaveAChai is a platform where creators can receive support from their audience in the form of a small, symbolic gesture – a cup of chai. It's an easy and friendly way for fans to say 'thank you' and support the work you do."
   },
   {
     id: 2,
-    question: "Who can use HaveAChai.com?",
-    answer: "Anyone! Whether you're a writer, developer, musician, artist, or content creator of any kind, you can create your own page on HaveAChai.com and start receiving support from your audience."
+    question: "Who can use HaveAChai?",
+    answer: "Anyone! Whether you're a writer, developer, musician, artist, or content creator of any kind, you can create your own page on HaveAChai and start receiving support from your audience."
   },
   {
     id: 3,
@@ -65,7 +65,7 @@ const FAQData = [
   },
   {
     id: 13,
-    question: "Can I use HaveAChai.com if I'm not based in India?",
+    question: "Can I use HaveAChai if I'm not based in India?",
     answer:
       "Currently, Razorpay supports Indian bank accounts. We're working on expanding support to international creators in future updates."
   },

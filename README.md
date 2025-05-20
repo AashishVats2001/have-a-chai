@@ -63,7 +63,7 @@ npm run dev
 **Aashish Vats**
 Front-End Web Developer | React Enthusiast | UI/UX Explorer
 
-- 🌐 Portfolio: [Have A Chai on Vercel](https://haveachai.vercel.app)
+- 🌐 Portfolio: [Have A Chai Live](https://have-a-chai.vercel.app)
 - 💼 LinkedIn: [linkedin.com/in/aashish-vats-dev](https://www.linkedin.com/in/aashish-vats-dev/)
 - 📧 Email: [aashishv2323@gmail.com](mailto:aashishv2323@gmail.com)
 - 📁 Resume: [Indeed Profile](https://profile.indeed.com/p/aashishv-x2j8tvk)

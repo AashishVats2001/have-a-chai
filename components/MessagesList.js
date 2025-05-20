@@ -64,7 +64,9 @@ const MessagesList = ({ username }) => {
           <div className="flex flex-col gap-5 bg-[#f7dcb9] shadow-xl p-7 rounded-lg">
             <div className='flex flex-col w-full gap-4'>
 
-              {
+              {payments.length === 0 ? (
+                <li className="text-center text-gray-500">No supporters yet!</li>
+              ) : (
                 payments
                   .slice()
                   .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)) // sort by time descending
@@ -77,7 +79,7 @@ const MessagesList = ({ username }) => {
                       isOpen={openId === i}
                     />
                   ))
-              }
+              )}
 
             </div>
           </div>
