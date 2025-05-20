@@ -65,7 +65,7 @@ const MessagesList = ({ username }) => {
             <div className='flex flex-col w-full gap-4'>
 
               {payments.length === 0 ? (
-                <li className="text-center text-gray-500">No supporters yet!</li>
+                <li className="text-center text-gray-500">No Payments yet!</li>
               ) : (
                 payments
                   .slice()

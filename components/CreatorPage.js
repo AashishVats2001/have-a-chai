@@ -410,7 +410,7 @@ const CreatorPage = ({ username }) => {
                                                 <h1>{currentUser.about}</h1>
 
                                                 {/* Link */}
-                                                <div className='flex gap-6'>
+                                                <div className='flex flex-wrap items-center justify-center gap-6'>
                                                     {currentUser.socials && Object.entries(currentUser.socials).map(([platform, link], index) => {
                                                         const selectedPlatform = socialOptions.find(option => option.value === platform);
 
