@@ -164,7 +164,7 @@ export default function Home() {
           {/* Description */}
           <div className="flex flex-col justify-between items-center bg-[#deac80] w-full xl:w-[65%] rounded-xl shadow-xl z-20">
             <div className="flex items-center mt-10 mx-4 rounded-full bg-[#eee2d8] gap-3">
-              <h1 className={`font-bold text-xl sm:text-2xl md:text-4xl p-2 md:p-4 text-center text-[#55320f] ${openSans.className}`}>
+              <h1 className={`font-bold text-xl sm:text-2xl md:text-4xl ms-4 p-2 md:p-4 text-center text-[#55320f] ${openSans.className}`}>
                 Start Earning with a Chai
               </h1>
               <CldImage
@@ -238,7 +238,7 @@ export default function Home() {
           {/* Description */}
           <div className="flex flex-col justify-between items-center bg-[#deac80] w-full xl:w-[65%] rounded-xl shadow-xl z-20">
             <div className="flex items-center mt-10 mx-4 rounded-full bg-[#eee2d8] gap-3">
-              <h1 className={`font-bold text-xl sm:text-2xl md:text-4xl p-2 md:p-4 text-center text-[#55320f] ${openSans.className}`}>
+              <h1 className={`font-bold text-xl sm:text-2xl md:text-4xl ms-4 p-2 md:p-4 text-center text-[#55320f] ${openSans.className}`}>
                 Support Creators You Love
               </h1>
               <CldImage
