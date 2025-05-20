@@ -16,7 +16,17 @@ export default {
         fredoka: ["var(--font-fredoka)"],
         playlistScript: ["var(--font-playlist-script)"],
         ttNorms: ["var(--font-tt-norms)"],
+      },
+      keyframes: {
+        'tap-bounce': {
+          '0%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(0.95)' },
+          '100%': { transform: 'scale(1)' },
         },
+      },
+      animation: {
+        'tap-bounce': 'tap-bounce 200ms ease-out',
+      },
     },
   },
   plugins: [require('tailwind-scrollbar')],

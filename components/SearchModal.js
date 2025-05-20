@@ -8,7 +8,7 @@ import { CldImage } from 'next-cloudinary';
 
 
 
-export default function SearchModal({hidden}) {
+export default function SearchModal({ hidden, closeNavbar }) {
     const [query, setQuery] = useState('');
     const [results, setResults] = useState([]);
     const [isOpen, setIsOpen] = useState(false);
@@ -86,7 +86,8 @@ export default function SearchModal({hidden}) {
 
     return (
         <>
-            <button onClick={() => setIsOpen(true)} className="flex items-center gap-1 cursor-text rounded-full px-5 bg-[#99ab61] text-[#eee2d8] py-2" placeholder='Search Creators'>
+            <button onClick={() => setIsOpen(true)}
+                className="flex items-center gap-1 cursor-text rounded-full px-5 bg-[#99ab61] text-[#eee2d8] py-2" placeholder='Search Creators'>
                 <MagnifyingGlassIcon className="w-5" /> <span className={` ${hidden && 'md:max-lg:hidden'} font-normal`}>Search Creators</span>
             </button>
 
@@ -129,7 +130,12 @@ export default function SearchModal({hidden}) {
                             )}
                             {results.map((user) => (
                                 <li key={user._id} className="border p-2 rounded-full hover:bg-gray-100">
-                                    <Link href={`/${user.username}`} onClick={handleClose}>
+                                    <Link
+                                        href={`/${user.username}`}
+                                        onClick={() => {
+                                            handleClose
+                                            if (closeNavbar) closeNavbar();
+                                        }}>
                                         <div className='flex items-center gap-3'>
 
                                             <CldImage

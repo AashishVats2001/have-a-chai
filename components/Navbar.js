@@ -13,10 +13,18 @@ const Navbar = () => {
     const [showDropdown, setShowdropdown] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const dropdownRef = useRef(null);
+    const [animating, setAnimating] = useState(false);
 
     const handleBlur = (e) => {
         if (!dropdownRef.current.contains(e.relatedTarget)) {
             setShowdropdown(false);  // Close dropdown if focus moves outside of it
+        }
+    };
+
+    const handleLogoClick = () => {
+        if (window.innerWidth < 768) {
+            setAnimating(true);
+            setTimeout(() => setAnimating(false), 200);
         }
     };
 
@@ -46,7 +54,9 @@ const Navbar = () => {
                 </div>
 
                 {/* Center - Logo */}
-                <div className={`flex items-center gap-2 pe-2 rounded-full bg-[#eee2d8] ${playlistScript.className} text-xl text-[#321c06]`}>
+                <div
+                    onClick={handleLogoClick}
+                    className={`flex items-center gap-2 pe-2 rounded-full bg-[#eee2d8] ${playlistScript.className} text-xl text-[#321c06] transition-all duration-200 md:hover:scale-95 ${animating ? 'animate-tap-bounce' : ''}`}>
                     <Link href="/">
                         <CldImage
                             className="min-w-max"
@@ -66,11 +76,11 @@ const Navbar = () => {
                     </Link>
                 </div>
 
-                {/* Right - Desktop and Mobile Menu */}
+                {/* Right - Desktop  */}
                 <div className="flex flex-1 items-center justify-end gap-3 md:gap-4">
 
                     <div className="hidden md:flex items-center gap-4 text-base font-normal">
-                        <SearchModal hidden={true}/>
+                        <SearchModal hidden={true} />
 
                         {session ? (
                             <div className="relative">
@@ -104,7 +114,7 @@ const Navbar = () => {
                                                 className="flex justify-Start gap-3 px-4 py-2 bg-[#eee2d8] text-[#625b5b] hover:bg-[#deac80] hover:text-[#f2f5fe] rounded-lg"
                                             >
                                                 <UserIcon className="size-6" />
-                                               My Page
+                                                My Page
                                             </Link>
                                         </li>
                                         <li className="px-2 py-1">
@@ -153,82 +163,84 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Menu */}
-            {isMenuOpen && (
-                <div className="md:hidden flex flex-col px-5 pb-4 gap-3 text-[#55320f] text-base w-full bg-[#b5c18e] transition-all">
-                    <SearchModal />
-                    <div className="flex gap-4 bg-[#f2f5fe] p-2 w-full font-semibold rounded-lg ">
-                        <Link
-                            href="/faq"
-                            onClick={handleLinkClick}
-                            className="w-1/2"
-                        >
-                            <button className="px-4 py-2 rounded-lg w-full ring-inset ring-[2px] ring-[#55320f] text-[#55320f] hover:bg-[#55320f] hover:text-[#f2f5fe] transition-all">
-                                FAQ
-                            </button>
-                        </Link>
-                        <Link
-                            href="/about"
-                            onClick={handleLinkClick}
-                            className="w-1/2"
-                        >
-                            <button className="px-4 py-2 rounded-lg w-full ring-inset ring-[2px] ring-[#bd783c] text-[#bd783c] hover:bg-[#bd783c] hover:text-[#f2f5fe] transition-all">
-                                About
-                            </button>
-                        </Link>
+            {
+                isMenuOpen && (
+                    <div className="md:hidden flex flex-col px-5 pb-4 gap-3 text-[#55320f] text-base w-full bg-[#b5c18e] transition-all">
+                        <SearchModal closeNavbar={() => setIsMenuOpen(false)} />
+                        <div className="flex gap-4 bg-[#f2f5fe] p-2 w-full font-semibold rounded-lg ">
+                            <Link
+                                href="/faq"
+                                onClick={handleLinkClick}
+                                className="w-1/2"
+                            >
+                                <button className="px-4 py-2 rounded-lg w-full ring-inset ring-[2px] ring-[#55320f] text-[#55320f] hover:bg-[#55320f] hover:text-[#f2f5fe] transition-all">
+                                    FAQ
+                                </button>
+                            </Link>
+                            <Link
+                                href="/about"
+                                onClick={handleLinkClick}
+                                className="w-1/2"
+                            >
+                                <button className="px-4 py-2 rounded-lg w-full ring-inset ring-[2px] ring-[#bd783c] text-[#bd783c] hover:bg-[#bd783c] hover:text-[#f2f5fe] transition-all">
+                                    About
+                                </button>
+                            </Link>
+                        </div>
+
+                        {session ? (
+                            <>
+                                <div className="flex flex-col gap-3 p-2 bg-[#f2f5fe] rounded-lg font-semibold">
+
+                                    <Link
+                                        href="/dashboard/edit-profile"
+                                        onClick={handleLinkClick}
+                                        className="px-4 py-2 rounded-lg w-full text-center bg-[#eee2d8] text-[#625b5b] hover:bg-[#deac80] hover:text-[#f2f5fe] transition-all"
+                                    >
+                                        <div className="grid grid-cols-6  gap-3 items-center">
+
+                                            <PencilSquareIcon className="size-6 col-span-1" />
+                                            <div className="col-span-4 text-center">Dashboard</div>
+                                        </div>
+                                    </Link>
+                                    <Link
+                                        href={`/${session.user.name}`}
+                                        onClick={handleLinkClick}
+                                        className="px-4 py-2 rounded-lg w-full text-center bg-[#eee2d8] text-[#625b5b] hover:bg-[#deac80] hover:text-[#f2f5fe] transition-all"
+                                    >
+                                        <div className="grid grid-cols-6 gap-3 items-center">
+
+                                            <UserIcon className="size-6 col-span-1" />
+                                            <div className="col-span-4 text-center">My Page</div>
+                                        </div>
+                                    </Link>
+                                    <Link
+                                        href="/dashboard/messages"
+                                        onClick={handleLinkClick}
+                                        className="px-4 py-2 rounded-lg w-full text-center bg-[#eee2d8] text-[#625b5b] hover:bg-[#deac80] hover:text-[#f2f5fe] transition-all"
+                                    >
+                                        <div className="grid grid-cols-6 gap-3 items-center">
+
+                                            <BellIcon className="size-6 col-span-1" />
+                                            <div className="col-span-4 text-center">Messages</div>
+                                        </div>
+                                    </Link>
+                                    <button onClick={handleSignOut} className="bg-[#c83f39] text-[#eee2d8] py-2 px-4 rounded-full w-full font-medium transition-all hover:hover:bg-red-700">Sign out</button>
+                                </div>
+                            </>
+                        ) : (
+                            <Link
+                                href="/login"
+                                onClick={handleLinkClick}
+
+                            >
+                                <button className="text-[#eee2d8] bg-[#bd783c] hover:bg-[#9c6332] py-2 px-4 rounded-full w-full font-medium transition-all ">Login</button>
+                            </Link>
+                        )}
                     </div>
-
-                    {session ? (
-                        <>
-                            <div className="flex flex-col gap-3 p-2 bg-[#f2f5fe] rounded-lg font-semibold">
-
-                                <Link
-                                    href="/dashboard/edit-profile"
-                                    onClick={handleLinkClick}
-                                    className="px-4 py-2 rounded-lg w-full text-center bg-[#eee2d8] text-[#625b5b] hover:bg-[#deac80] hover:text-[#f2f5fe] transition-all"
-                                >
-                                    <div className="grid grid-cols-6  gap-3 items-center">
-
-                                        <PencilSquareIcon className="size-6 col-span-1" />
-                                        <div className="col-span-4 text-center">Dashboard</div>
-                                    </div>
-                                </Link>
-                                <Link
-                                    href={`/${session.user.name}`}
-                                    onClick={handleLinkClick}
-                                    className="px-4 py-2 rounded-lg w-full text-center bg-[#eee2d8] text-[#625b5b] hover:bg-[#deac80] hover:text-[#f2f5fe] transition-all"
-                                >
-                                    <div className="grid grid-cols-6 gap-3 items-center">
-
-                                        <UserIcon className="size-6 col-span-1" />
-                                        <div className="col-span-4 text-center">My Page</div>
-                                    </div>
-                                </Link>
-                                <Link
-                                    href="/dashboard/messages"
-                                    onClick={handleLinkClick}
-                                    className="px-4 py-2 rounded-lg w-full text-center bg-[#eee2d8] text-[#625b5b] hover:bg-[#deac80] hover:text-[#f2f5fe] transition-all"
-                                >
-                                    <div className="grid grid-cols-6 gap-3 items-center">
-
-                                        <BellIcon className="size-6 col-span-1" />
-                                        <div className="col-span-4 text-center">Messages</div>
-                                    </div>
-                                </Link>
-                                <button onClick={handleSignOut} className="bg-[#c83f39] text-[#eee2d8] py-2 px-4 rounded-full w-full font-medium transition-all hover:hover:bg-red-700">Sign out</button>
-                            </div>
-                        </>
-                    ) : (
-                        <Link
-                            href="/login"
-                            onClick={handleLinkClick}
-
-                        >
-                            <button className="text-[#eee2d8] bg-[#bd783c] hover:bg-[#9c6332] py-2 px-4 rounded-full w-full font-medium transition-all ">Login</button>
-                        </Link>
-                    )}
-                </div>
-            )}
-        </nav>
+                )
+            }
+        </nav >
     );
 };
 
