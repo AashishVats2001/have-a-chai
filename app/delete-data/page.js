@@ -1,3 +1,10 @@
+
+
+export const metadata = {
+  title: "User Data Deletion"
+};
+
+
 export default function DeleteData() {
   return (
     <main className="h-[80vh] w-screen flex flex-col justify-center items-center gap-4 text-black">

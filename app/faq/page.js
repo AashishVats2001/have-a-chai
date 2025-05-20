@@ -2,6 +2,10 @@ import React from 'react'
 import FAQList from '@/components/FAQList'
 import { fredoka } from "../fonts.js";
 
+export const metadata = {
+  title: "FAQ | Have A Chai",
+  description: "Frequently asked questions for the website 'Have A Chai'.",
+};
 
 const Faq = () => {
   return (

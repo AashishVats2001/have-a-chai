@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Privacy Policy"
+};
+
+
 export default function PrivacyPolicy() {
     return (
         <main className="h-[80vh] w-screen flex flex-col justify-center items-center gap-4 text-black">

@@ -8,21 +8,32 @@ cloudinary.v2.config({
 });
 
 export async function POST(req) {
+    const DEFAULT_PUBLIC_IDS = [
+        process.env.NEXT_PUBLIC_DEFAULT_PROFILE_PUBLIC_ID,
+        process.env.NEXT_PUBLIC_DEFAULT_COVER_PUBLIC_ID
+    ];
+
     try {
         const { publicId } = await req.json();
 
         if (!publicId) {
             return NextResponse.json({ success: false, message: 'Missing publicId' }, { status: 400 });
         }
-
+        if (DEFAULT_PUBLIC_IDS.includes(publicId)) {
+            return NextResponse.json({
+                success: false,
+                message: 'Cannot delete default image'
+            }, { status: 403 });
+        }
+        
         const result = await cloudinary.v2.uploader.destroy(publicId)
-        console.log('Cloudinary delete result:', result);
+        // console.log('Cloudinary delete result:', result);
 
 
         if (result.result !== 'ok' && result.result !== 'not found') {
             return NextResponse.json({ success: false, message: 'Failed to delete image' }, { status: 500 });
         }
-        console.log('Image delete successfully');
+        // console.log('Image delete successfully');
 
         return NextResponse.json({ success: true, message: 'Image deleted successfully' });
     } catch (error) {

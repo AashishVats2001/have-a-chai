@@ -8,9 +8,7 @@ import { ToastContainer, toast, Slide } from 'react-toastify';
 import { useSearchParams, useRouter } from 'next/navigation'
 import { CldImage } from 'next-cloudinary'
 import { socialOptions } from './SocialOptions'
-
 import { openSans } from "@/app/fonts";
-
 
 
 const CreatorPage = ({ username }) => {
