@@ -162,7 +162,7 @@ const Navbar = () => {
                             onClick={handleLinkClick}
                             className="w-1/2"
                         >
-                            <button className="px-4 py-2 rounded-lg w-full ring-inset ring-[3px] ring-[#55320f] text-[#55320f] hover:bg-[#55320f] hover:text-[#f2f5fe] transition-all">
+                            <button className="px-4 py-2 rounded-lg w-full ring-inset ring-[2px] ring-[#55320f] text-[#55320f] hover:bg-[#55320f] hover:text-[#f2f5fe] transition-all">
                                 FAQ
                             </button>
                         </Link>
@@ -171,7 +171,7 @@ const Navbar = () => {
                             onClick={handleLinkClick}
                             className="w-1/2"
                         >
-                            <button className="px-4 py-2 rounded-lg w-full ring-inset ring-[3px] ring-[#bd783c] text-[#bd783c] hover:bg-[#bd783c] hover:text-[#f2f5fe] transition-all">
+                            <button className="px-4 py-2 rounded-lg w-full ring-inset ring-[2px] ring-[#bd783c] text-[#bd783c] hover:bg-[#bd783c] hover:text-[#f2f5fe] transition-all">
                                 About
                             </button>
                         </Link>
@@ -214,7 +214,7 @@ const Navbar = () => {
                                         <div className="col-span-4 text-center">Messages</div>
                                     </div>
                                 </Link>
-                                <button onClick={handleSignOut} className="bg-[#c83f39] text-[#eee2d8] py-2 px-4 rounded-full w-full transition-all hover:hover:bg-red-700">Sign out</button>
+                                <button onClick={handleSignOut} className="bg-[#c83f39] text-[#eee2d8] py-2 px-4 rounded-full w-full font-medium transition-all hover:hover:bg-red-700">Sign out</button>
                             </div>
                         </>
                     ) : (
@@ -223,7 +223,7 @@ const Navbar = () => {
                             onClick={handleLinkClick}
 
                         >
-                            <button className="text-[#eee2d8] bg-[#bd783c] hover:bg-[#9c6332] py-2 px-4 rounded-full w-full transition-all ">Login</button>
+                            <button className="text-[#eee2d8] bg-[#bd783c] hover:bg-[#9c6332] py-2 px-4 rounded-full w-full font-medium transition-all ">Login</button>
                         </Link>
                     )}
                 </div>

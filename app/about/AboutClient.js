@@ -44,7 +44,7 @@ const AboutClient = () => {
                     Aashish Vats | Front-End React Developer
                 </p>
 
-                <div className="w-full md:w-[70%] rounded-xl bg-[#eeaa94] text-[#f2f5fe] text-sm md:text-base shadow-xl">
+                <div className="w-full md:w-[70%] rounded-xl bg-[#bb926e] text-[#f2f5fe] text-sm md:text-base shadow-xl">
                     <div className={`flex flex-col gap-6 px-6 md:px-14 py-10 ${openSans.className}`}>
                         <h2 className="text-3xl md:text-5xl font-bold">Hi!</h2>
                         <p>

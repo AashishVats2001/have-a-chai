@@ -52,7 +52,7 @@ export default function Home() {
           <div className="text-[#4e2d1b] z-20 text-4xl sm:text-5xl md:text-6xl xl:text-7xl transition-all">
             <h1 className={`font-bold ${openSans.className}`}>Have a <span className={`text-[#bd783c] ${playlistScript.className} font-normal`}>Chai!</span></h1>
 
-            <h1 className="font-bold">Fund your <span className="text-[#5a6635] inline-block text-start" style={{ minWidth: `${longestWordLength}ch` }}> {words[index].substring(0, subIndex)}</span></h1>
+            <h1 className="font-bold">Fund your <span className="text-[#5a6635] inline-block text-center min-[382px]:text-start" style={{ minWidth: `${longestWordLength}ch` }}> {words[index].substring(0, subIndex)}</span></h1>
           </div>
 
           <p className="font-medium z-20 text-[#55320f] sm:text-xl ">&ldquo;A simple way to support creators by buying them a cup of chai.&rdquo;</p>
@@ -65,7 +65,7 @@ export default function Home() {
 
           {/* Decorative Hearts in the background */}
           <CldImage
-            className="z-10 absolute sm:ms-28 lg:ms-0 translate-y-[20%] lg:translate-y-[50%]"
+            className="z-10 absolute sm:ms-28 lg:ms-0 translate-y-[20%] lg:translate-y-[50%] opacity-50 lg:opacity-100"
             width={384}
             height={384}
             style={{
@@ -176,10 +176,10 @@ export default function Home() {
               />
             </div>
 
-            <div className="w-full flex justify-center  my-7">
-              <div className={`flex flex-col gap-4 w-11/12 items-center font-medium ${openSans.className} bg-[#eee2d8] rounded-lg p-4 text-base md:text-lg lg:text-xl`}>
+            <div className="w-full flex justify-center h-full my-7">
+              <div className={`flex flex-col gap-4 w-11/12  items-center font-medium ${openSans.className} bg-[#eee2d8] rounded-lg p-4 text-base md:text-lg lg:text-xl`}>
 
-                <div className="flex flex-col gap-4 leading-6 md:leading-7 text-center md:text-start">
+                <div className="flex flex-col h-full gap-4 leading-6 md:leading-7 text-center md:text-start">
                   <p className="text-[#cf8c51] ">
                     <span className="bg-[#ff914d] text-[#f2f5fe] px-1 rounded">Share your passion</span> and let your supporters fuel your journey. Whether you&apos;re a <span className="bg-[#ff914d] text-[#f2f5fe] px-1 rounded">Writer, Musician, Developer, or Artist,</span> HaveAChai is here to help you turn appreciation into something tangible.
                   </p>
