@@ -1,12 +1,44 @@
 'use client'
 
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { fredoka, openSans, ttNorms, playlistScript } from "./fonts";
 import { CldImage } from "next-cloudinary";
 import SearchModal from "@/components/SearchModal";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 export default function Home() {
+  const words = ["Passion", "Hobbies", "Creator", "Success", "Journey", "Vision", "Talents"];
+  const TYPING_SPEED = 70;
+  const DELETING_SPEED = 70;
+  const DELAY_BEFORE_DELETING = 1200;
+  const [index, setIndex] = useState(0);
+  const [subIndex, setSubIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+
+  // Typewriter Effect
+  useEffect(() => {
+    const typingTimeout = setTimeout(() => {
+      if (isDeleting) {
+        if (subIndex > 0) {
+          setSubIndex(subIndex - 1);
+        } else {
+          setIsDeleting(false);
+          setIndex((prev) => (prev + 1) % words.length);
+        }
+      } else {
+        if (subIndex < words[index].length) {
+          setSubIndex(subIndex + 1);
+        } else {
+          setTimeout(() => setIsDeleting(true), DELAY_BEFORE_DELETING);
+        }
+      }
+    }, isDeleting ? DELETING_SPEED : TYPING_SPEED);
+
+    return () => clearTimeout(typingTimeout);
+  }, [subIndex, isDeleting, index]);
+
+  const longestWordLength = Math.max(...words.map(word => word.length));
   return (
     <div className="flex flex-col items-center overflow-x-hidden">
 
@@ -17,9 +49,10 @@ export default function Home() {
 
           <p className="text-[#5a6635] font-semibold text-sm sm:text-md ">⭐⭐⭐⭐⭐ Loved by 1,000,000+ creators</p>
 
-          <div className="text-[#4e2d1b] z-20 text-4xl sm:text-6xl md:text-7xl xl:text-8xl transition-all">
+          <div className="text-[#4e2d1b] z-20 text-4xl sm:text-5xl md:text-6xl xl:text-7xl transition-all">
             <h1 className={`font-bold ${openSans.className}`}>Have a <span className={`text-[#bd783c] ${playlistScript.className} font-normal`}>Chai!</span></h1>
-            <h1 className="font-bold">Fund your <span className="text-[#5a6635]">Passion</span></h1>
+
+            <h1 className="font-bold">Fund your <span className="text-[#5a6635] inline-block text-start" style={{ minWidth: `${longestWordLength}ch` }}> {words[index].substring(0, subIndex)}</span></h1>
           </div>
 
           <p className="font-medium z-20 text-[#55320f] sm:text-xl ">&ldquo;A simple way to support creators by buying them a cup of chai.&rdquo;</p>
@@ -228,7 +261,7 @@ export default function Home() {
                   <p className="">Because even the smallest contribution can make a big difference in the life of a passionate creator.</p>
                 </div>
 
-                  <SearchModal hidden={false} />
+                <SearchModal hidden={false} />
               </div>
             </div>
           </div>
