@@ -283,7 +283,7 @@ export default function Home() {
 
             <div className="flex flex-col items-center justify-between gap-0">
               <h1 className="text-2xl md:text-3xl font-bold text-[#55320f]">Step 1:</h1>
-              <h1 className={`text-lg md:text-2xl font-medium text-[#f2f5fe] bg-[#99ab61] rounded-md px-2 mt-5 z-10`}>Find your favourite creator</h1>
+              <h1 className={`text-lg md:text-2xl font-medium text-[#f2f5fe] bg-[#99ab61] leading-5 rounded-md p-2 mt-5 z-10`}>Find your favourite creator</h1>
               <CldImage
                 className="-mt-10"
                 width={250}
@@ -300,7 +300,7 @@ export default function Home() {
 
             <div className="flex flex-col items-center justify-between gap-0">
               <h1 className="text-2xl md:text-3xl font-bold text-[#55320f]">Step 2:</h1>
-              <h1 className={`text-lg md:text-2xl font-medium text-[#f2f5fe] bg-[#99ab61] rounded-md px-2 mt-5 z-10 ${ttNorms.className}`}>Buy them a cup of chai</h1>
+              <h1 className={`text-lg md:text-2xl font-medium text-[#f2f5fe] bg-[#99ab61] leading-5 rounded-md p-2 mt-5 z-10 ${ttNorms.className}`}>Buy them a cup of chai</h1>
               <CldImage
                 className="-mt-10"
                 width={250}
@@ -317,7 +317,7 @@ export default function Home() {
 
             <div className="flex flex-col items-center justify-between gap-0">
               <h1 className="text-2xl md:text-3xl font-bold text-[#55320f]">Step 3:</h1>
-              <h1 className={`text-lg md:text-2xl font-medium text-[#f2f5fe] bg-[#99ab61] rounded-md px-2 mt-5 z-10 ${ttNorms.className}`}>Support their journey</h1>
+              <h1 className={`text-lg md:text-2xl font-medium text-[#f2f5fe] bg-[#99ab61] rounded-md p-2 mt-5 z-10 ${ttNorms.className}`}>Support their journey</h1>
               <CldImage
                 className="-mt-10"
                 width={250}
