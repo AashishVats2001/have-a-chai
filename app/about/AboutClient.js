@@ -71,7 +71,7 @@ const AboutClient = () => {
                 </h3>
 
                 {/* Contact Links */}
-                <div className="flex justify-center items-center gap-6 mt-6">
+                <div className="flex justify-center items-end gap-6 mt-6">
                     <Link href="https://www.linkedin.com/in/aashish-vats-dev/" target="_blank">
                         <CldImage
                             src="https://res.cloudinary.com/dnhnp8gtw/image/upload/v1745220313/qccjnqounhtp0uqqtzde.png"
@@ -80,7 +80,7 @@ const AboutClient = () => {
                             height={60}
                         />
                     </Link>
-                    <Link href="https://profile.indeed.com/p/aashishv-x2j8tvk" target="_blank">
+                    <Link href="https://profile.indeed.com/p/aashishv-x2j8tvk" target="_blank" className="">
                         <CldImage
                             src="https://res.cloudinary.com/dnhnp8gtw/image/upload/v1745220312/dr8vunujvpoe9cpwnem2.png"
                             alt="Indeed"
@@ -88,7 +88,7 @@ const AboutClient = () => {
                             height={60}
                         />
                     </Link>
-                    <Link href="https://mail.google.com/mail/?view=cm&fs=1&to=aashishv2323@gmail.com" target="_blank">
+                    <Link href="https://mail.google.com/mail/?view=cm&fs=1&to=aashishv2323@gmail.com" target="_blank" className="translate-y-[5px]">
                         <CldImage
                             src="https://res.cloudinary.com/dnhnp8gtw/image/upload/v1745220313/kse3cpkvby3qvhf2r1ca.png"
                             alt="Gmail"
