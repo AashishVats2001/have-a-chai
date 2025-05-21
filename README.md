@@ -4,6 +4,25 @@
 
 ---
 
+## ❓ What is HaveAChai?
+
+**Have A Chai** is a fun, lightweight platform that allows anyone to support their favorite **creator, artist, musician, programmer, band, chef — or any talented human** with a small donation.
+
+Not actual cups of chai — but real money, **disguised as a humble cup of chai**.
+
+Here's how it works:
+
+1. A supporter visits the profile of the creator they want to support.
+2. They select how many cups of chai to donate.
+3. hey can leave a personal message along with their support.
+4. Payment is quick, simple, and secure.
+
+
+That’s it. Just a friendly, easy way to say:
+>_"Hey, I love what you do. Here’s a chai on me.”_
+
+---
+
 ## 🚀 Tech Stack
 
 - **Framework**: [Next.js](https://nextjs.org/)
