@@ -104,7 +104,7 @@ const Navbar = () => {
                                                 className="flex justify-Start gap-3 px-4 py-2 bg-[#eee2d8] text-[#625b5b] hover:bg-[#deac80] hover:text-[#f2f5fe] rounded-lg"
                                             >
                                                 <PencilSquareIcon className="size-6" />
-                                                Dashboard
+                                                Edit Profile
                                             </Link>
                                         </li>
                                         <li className="px-2 py-1">
@@ -200,7 +200,7 @@ const Navbar = () => {
                                         <div className="grid grid-cols-6  gap-3 items-center">
 
                                             <PencilSquareIcon className="size-6 col-span-1" />
-                                            <div className="col-span-4 text-center">Dashboard</div>
+                                            <div className="col-span-4 text-center">Edit Profile</div>
                                         </div>
                                     </Link>
                                     <Link
