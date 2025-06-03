@@ -76,7 +76,9 @@ export default function SearchModal({ hidden, closeNavbar }) {
     };
 
     const handleClose = () => {
+        console.log('CLosed');
         setTimeout(() => {
+            
             setIsOpen(false);
             setQuery('');
             setResults([]); // Clear results when the modal is closed
@@ -132,7 +134,7 @@ export default function SearchModal({ hidden, closeNavbar }) {
                                     <Link
                                         href={`/${user.username}`}
                                         onClick={() => {
-                                            handleClose
+                                            handleClose();
                                             if (closeNavbar) closeNavbar();
                                         }}>
                                         <div className='flex items-center gap-3'>
