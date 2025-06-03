@@ -18,22 +18,21 @@ export default function SearchModal({ hidden, closeNavbar }) {
     // Debounce logic
     useEffect(() => {
         const timeoutId = setTimeout(() => {
-            if (query.trim()) {
-                handleSearch(query);
-            } else {
-                setResults([]);
-            }
-        }, 500);
+            handleSearch(query);
+        }, 200);
 
-        return () => clearTimeout(timeoutId); // Cleanup on query change
+        return () => clearTimeout(timeoutId);
     }, [query]);
 
-    useEffect(() => {
-        if (isOpen && inputRef.current) {
-            inputRef.current.focus();
-        }
-    }, [isOpen])
 
+    useEffect(() => {
+        if (isOpen) {
+            handleSearch(""); // 👈 show default creators when modal opens
+            if (inputRef.current) {
+                inputRef.current.focus();
+            }
+        }
+    }, [isOpen]);
 
     useEffect(() => {
         const handleKeyDown = (e) => {
