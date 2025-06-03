@@ -5,14 +5,14 @@ import { NextResponse } from "next/server";
 export async function POST(req) {
     await connectDB();
     const usernames = [
-        // 'aashishvatsdev'
-        // 'wildertrails',
-        // 'burningfeathersband',
-        // 'thepawprintlife',
-        // 'ConnorPlaysGuitar',
-        'aashishvats',
-        'hankandreson',
-        'aashishv4343'
+        'aashishvatsdev',
+        'wildertrails',
+        'burningfeathersband',
+        'thepawprintlife',
+        'ConnorPlaysGuitar',
+        // 'aashishvats',
+        // 'hankandreson',
+        // 'aashishv4343'
     ];
 
     const body = await req.json();
