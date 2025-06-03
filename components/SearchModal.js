@@ -138,7 +138,7 @@ export default function SearchModal({ hidden, closeNavbar }) {
                                         <div className='flex items-center gap-3'>
 
                                             <CldImage
-                                                className='rounded-full aspect-square'
+                                                className='rounded-full aspect-square object-cover'
                                                 width={35}
                                                 height={35}
                                                 src={user.profilepic || 'https://res.cloudinary.com/dnhnp8gtw/image/upload/v1745137142/jzcrsb73zm86nw3ntyfn.jpg'}
