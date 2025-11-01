@@ -51,7 +51,7 @@ That’s it. Just a friendly, easy way to say:
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/have-a-chai.git
+git clone https://github.com/aashishvats2001/have-a-chai.git
 ```
 ### 2. Change directory
 ```bash
